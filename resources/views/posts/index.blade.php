@@ -3,19 +3,22 @@
 @section('content')
     <h1>posts</h1>
     @if(count($posts)> 1)
-
-
-    <div class="card">
-        <ul class="list-group list-group-flush">
+        <div class="card">
+            <ul class="list-group list-group-flush">
             @foreach($posts as $post)
-            <li class="list-group-item">
-                <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
-                <small>written on {{$post->created_at}}</small>
-            </li>
-                $endforeach
-        </ul>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img style="width:100%; height:50%" src="/storage/cover_images/{{$post->cover_image}}" alt="">
+                    </div>
+                    <div class="col-md-8">
+                            <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
+                            <small>written on {{$post->created_at}}</small>
 
-    </div>
+                    </div>
+                </div>
+                @endforeach
+            </ul>
+        </div>
     @else
 
     @endif

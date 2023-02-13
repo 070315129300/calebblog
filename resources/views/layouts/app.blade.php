@@ -30,7 +30,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/posts/create">Add Post</a>
+                            <a class="nav-link" href="posts/create">Add Post</a>
                         </li>
                     </ul>
 
@@ -44,7 +44,7 @@
                             <a class="nav-link" href="about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="posts">Blog</a>
+                            <a class="nav-link" href='posts'>Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="services">Services</a>
@@ -86,6 +86,7 @@
         </nav>
 
         <main class="py-4 container">
+
             @include('inc.messages')
             @yield('content')
         </main>
